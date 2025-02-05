@@ -1,0 +1,269 @@
+/* Definering av variabler */
+:root {
+    --primary-color: #656565;
+    --secondary-color: #ffffff;
+    --accent-color: #000000;
+    --background-color: rgba(0, 0, 0, 0.767);
+    --text-color: #ffffff;
+    --text-size: 20px;
+}
+
+/* CSS Reset */
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, sans-serif;
+    font-size: var(--text-size);
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* CSS stil under her */
+
+body {
+    display: grid;
+    grid-template-rows: 100px auto 100px;
+    min-height: 100vh;
+    background-color: var(--background-color);
+}
+
+header,
+main,
+footer {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    background-color: var(--accent-color);
+    justify-content: space-between;
+    width: 100%;
+    color: var(--text-color);
+    box-shadow: 0px 20px 40px var(--accent-color);
+    z-index: 1;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background-color);
+    overflow-y: auto;
+    color: var(--text-color);
+    margin-top: 40px;
+}
+
+main .form-wrapper {
+    align-content: center;
+    text-align: center;
+    height: 100%;
+}
+
+main > p {
+    max-width: 800px;
+}
+
+
+.index-main {
+    display: grid;
+    grid-template-rows: auto auto;
+    text-align: center;
+    max-width: 1000px;
+    margin: 25px auto; /* Center the content horizontally */
+}
+
+.index-main ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: left; /* Anchor text to the left */
+}
+
+.index-main ul li {
+    margin: 10px 0;
+    color: var(--text-color);
+    font-size: var(--text-size);
+}
+
+footer {
+    background-color: var(--background-color);
+    color: var(--secondary-color);
+    align-content: center;
+    text-align: center;
+}
+
+button {
+    color: var(--text-color);
+}
+
+header .logo-img {
+    width: 250px;
+    padding: 10px;
+    display: block;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 40%;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    width: 100%;
+    /* font-size: 2rem; */
+}
+
+header nav ul li {
+    position: relative;
+}
+
+header nav ul li a {
+    display: block;
+}
+
+header nav ul li .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--background-color);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    z-index: 1;
+    white-space: nowrap;
+}
+
+header nav ul li .dropdown-content a {
+    padding: 10px 15px;
+    display: block;
+    color: var(--text-color);
+}
+
+header nav ul li .dropdown-content a:hover {
+    background-color: var(--secondary-color);
+    color: var(--background-color);
+}
+
+header nav ul li:hover .dropdown-content {
+    display: block;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 1);
+    width: 1000px;
+    max-width: 500px;
+    font-size: 1.5vw;
+    margin: 20px auto;
+}
+
+form input,
+form textarea,
+form select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    font-size: var(--text-size);
+}
+
+form input[type="submit"],
+form button {
+    width: auto;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: var(--text-size);
+}
+
+form input[type="submit"]:hover,
+form button:hover {
+    background-color: var(--accent-color);
+}
+
+.knapplog1{
+    display: flex;
+    width: 20vw;
+}
+
+.kommentar-submit{
+   width: 80%; 
+   height: 30px; 
+   border-radius: 5px;
+}
+
+#kommentar {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.main-content {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    max-height: 50vh;
+}
+
+.kommentar-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}

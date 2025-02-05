@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>skibidirizz.no</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="/" class="logo-img">
+            <img src="/img/nexatech/logo-darkmode.svg" alt="Logo" />
+        </a>
+        <nav>
+            <ul>
+                <li class="dropdown">
+                    <a class="dropbtn">Bruker</a>
+                    <div class="dropdown-content">
+                        <a href="/login">Logg på</a>
+                        <a href="/ny-bruker">Ny bruker</a>
+                        <a href="/logout">Logg ut</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>        
+        <section class="login-form">
+        <form action="/login" method="post">
+            <label for="username">Brukernavn:</label>
+            <input type="text" id="username" name="brukernavn" required><br>
+            
+            <label for="password">Passord:</label>
+            <input type="password" id="password" name="passord" required><br>
+            
+            <button type="submit" value="Registrer" class="knapplog1">Logg på</button><br>
+            <a href="/ny-bruker">opprett bruker</a>
+        </form>
+    </section></main>
+
+    <footer>NexaTech ©️ 2025</footer>
+</body>
+</html>
